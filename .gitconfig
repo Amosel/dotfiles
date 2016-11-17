@@ -1,0 +1,100 @@
+[user]
+    name = Amos Elmaliah
+    email = amosel@gmail.com
+[alias]
+    b = branch
+    s = status
+    a = !git add . && git status
+    au = !git add -u . && git status
+    aa = !git add . && git add -u . && git status
+
+    ac = !git add . && git commit
+    acm = !git add . && git commit -m
+
+    l   = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    la  = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    ll  = log --stat --abbrev-commit
+
+    d = diff --color-words
+    dt = difftool
+    dh = diff --color-words head
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = Kaleidoscope
+[difftool]
+    prompt = false
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
+[merge]
+    tool = Kaleidoscope
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[core]
+    excludesfile = /Users/amoselmaliah/.gitignore_global
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[credential]
+	helper = osxkeychain
+	helper = !/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /usr/local/Cellar/git-credential-manager/1.6.0/libexec/git-credential-manager-1.6.0.jar
+[user]
+    name = Amos Elmaliah
+    email = amosel@gmail.com
+[alias]
+    b = branch
+    s = status
+    a = !git add . && git status
+    au = !git add -u . && git status
+    aa = !git add . && git add -u . && git status
+
+    ac = !git add . && git commit
+    acm = !git add . && git commit -m
+
+    l   = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    la  = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    ll  = log --stat --abbrev-commit
+
+    d = diff --color-words
+    dt = difftool
+    dh = diff --color-words head
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = Kaleidoscope
+[difftool]
+    prompt = false
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
+[merge]
+    tool = Kaleidoscope
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[filter "hawser"]
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
+[core]
+    excludesfile = /Users/amoselmaliah/.gitignore_global
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
+[credential]
+	helper = osxkeychain
+	helper = !/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /usr/local/Cellar/git-credential-manager/1.6.0/libexec/git-credential-manager-1.6.0.jar
