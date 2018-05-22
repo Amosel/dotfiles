@@ -3,6 +3,7 @@
     email = amosel@gmail.com
 [alias]
     b = branch
+    bb = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:blue)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
     s = status
     a = !git add . && git status
     au = !git add -u . && git status
