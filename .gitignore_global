@@ -9,16 +9,15 @@ xcuserdata
 *.xcworkspace
 *.pbxuser
 
-# Thumbnail cache files
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
 ._*
-Thumbs.db
-
-# Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-# osx noise
-.DS_store
+ehthumbs.db
+Thumbs.db
 
 # svn
 .svn
@@ -26,9 +25,10 @@ Thumbs.db
 # Compiled Python files
 *.pyc
 
-# Folder view configuration files
-.DS_Store
-Desktop.ini
-
 # builds
 build/*
+
+.log
+._*
+
+.idea*
