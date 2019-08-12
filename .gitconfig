@@ -41,7 +41,7 @@
     smudge = git hawser smudge %f
     required = true
 [core]
-    excludesfile = /Users/amoselmaliah/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [filter "lfs"]
     clean = git lfs clean %f
     smudge = git lfs smudge %f
