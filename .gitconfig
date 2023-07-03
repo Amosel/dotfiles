@@ -15,6 +15,7 @@
     l   = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
     la  = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
     ll  = log --stat --abbrev-commit
+    authors = git log --format='%aN' | sort | uniq -c | sort -rn
 
     d = diff --color-words
     dt = difftool
